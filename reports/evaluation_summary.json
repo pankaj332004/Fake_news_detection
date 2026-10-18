@@ -1,0 +1,3059 @@
+{
+  "dataset_size": 12,
+  "baseline": {
+    "accuracy": 0.75,
+    "precision": 0.8571,
+    "recall": 0.75,
+    "f1": 0.8,
+    "tp": 6,
+    "tn": 3,
+    "fp": 1,
+    "fn": 2,
+    "unverifiable_count": 0,
+    "confidently_incorrect": 0
+  },
+  "llm_only": {
+    "accuracy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "unverifiable_count": 12,
+    "confidently_incorrect": 0
+  },
+  "hybrid": {
+    "accuracy": 0.5833,
+    "precision": 0.7143,
+    "recall": 1.0,
+    "f1": 0.8333,
+    "tp": 5,
+    "tn": 0,
+    "fp": 2,
+    "fn": 0,
+    "unverifiable_count": 3,
+    "confidently_incorrect": 1
+  },
+  "detailed_results": [
+    {
+      "id": "TC-01",
+      "ground_truth": "REAL",
+      "pred_label": "FAKE",
+      "confidence": 0.6058,
+      "is_correct": false,
+      "consensus_status": "EVIDENCE_OVERRIDE",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+        "title": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 128,
+        "word_count": 17,
+        "evaluated_text": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+        "preview": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+        "verdict": "Real",
+        "label_id": 0,
+        "confidence": 0.5073,
+        "prob_fake": 0.4927,
+        "prob_real": 0.5073,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 139.7,
+          "supporting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p1",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Major global pediatric and medical associations unanimously confirm that vaccines do not cause autism.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.7741,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.37,
+              "rank": 3,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ],
+          "contradicting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.7614,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            }
+          ],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p1",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Major global pediatric and medical associations unanimously confirm that vaccines do not cause autism.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.7741,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.7614,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.37,
+              "rank": 3,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Real",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 2,
+            "supporting_count": 2,
+            "contradicting_count": 1,
+            "neutral_count": 0,
+            "avg_similarity": 0.6352,
+            "max_similarity": 0.7741,
+            "has_sufficient_evidence": true,
+            "has_contradictory_evidence": true,
+            "has_supporting_evidence": true,
+            "coverage_assessment": "strong",
+            "quality_score": 0.88
+          },
+          "contradiction_analysis": {
+            "evidence_status": "mixed",
+            "is_contradicted": true,
+            "is_missing": false,
+            "contradiction_strength": 0.761,
+            "support_strength": 0.572,
+            "key_contradictions": [
+              "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism"
+            ],
+            "key_supports": [
+              "Major global pediatric and medical associations unanimously confirm that vaccines do not cause autism.",
+              "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger"
+            ],
+            "explanation": "Mixed evidence: 2 supporting and 1 contradicting passages found. Requires careful weighing."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.678,
+            "evidence_confidence": 0.7,
+            "model_confidence": 0.85,
+            "alignment_score": 0.5,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 68% (medium uncertainty). Strong evidence coverage supports the reliability of this assessment.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.6058,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "EVIDENCE_OVERRIDE",
+        "consensus_synthesis": "Evidence override: While statistical styling suggested 'Real', authoritative retrieved evidence directly contradicts the claim (1 refuting passages). Evidence takes precedence over linguistic styling.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+          "title": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 128,
+          "word_count": 17,
+          "evaluated_text": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+          "preview": "Multiple peer-reviewed epidemiological studies confirm that the measles, mumps, and rubella (MMR) vaccine does not cause autism.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.6058,
+          "confidence": 0.6058,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "EVIDENCE_OVERRIDE",
+          "consensus_synthesis": "Evidence override: While statistical styling suggested 'Real', authoritative retrieved evidence directly contradicts the claim (1 refuting passages). Evidence takes precedence over linguistic styling.",
+          "statistical": {
+            "verdict": "Real",
+            "confidence": 0.5073,
+            "prob_fake": 0.4927,
+            "prob_real": 0.5073,
+            "label_id": 0
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 2,
+            "contradicting_count": 1,
+            "max_similarity": 0.7741,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-002#p1",
+                  "doc_id": "DOC-HEALTH-002",
+                  "text": "Major global pediatric and medical associations unanimously confirm that vaccines do not cause autism.",
+                  "title": "MMR Vaccine Safety and Debunking Autism Link",
+                  "source": "Centers for Disease Control and Prevention (CDC)",
+                  "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                  "category": "health",
+                  "published_date": "2023-11-20",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.7741,
+                "rank": 1,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-002#p0",
+                  "doc_id": "DOC-HEALTH-002",
+                  "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                  "title": "MMR Vaccine Safety and Debunking Autism Link",
+                  "source": "Centers for Disease Control and Prevention (CDC)",
+                  "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                  "category": "health",
+                  "published_date": "2023-11-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.7614,
+                "rank": 2,
+                "stance": "contradicts",
+                "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p0",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.37,
+                "rank": 3,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              }
+            ],
+            "retrieval_time_ms": 139.7
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5073,
+            "should_flag_for_review": false,
+            "evidence_status": "mixed",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-02",
+      "ground_truth": "FAKE",
+      "pred_label": "FAKE",
+      "confidence": 0.6445,
+      "is_correct": true,
+      "consensus_status": "STRONG_AGREEMENT",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+        "title": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 101,
+        "word_count": 13,
+        "evaluated_text": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+        "preview": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.5556,
+        "prob_fake": 0.5556,
+        "prob_real": 0.4444,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 23.36,
+          "supporting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4583,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Evidence aligns with and supports the statement."
+            }
+          ],
+          "contradicting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4175,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.411,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            }
+          ],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4583,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Evidence aligns with and supports the statement."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4175,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.411,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Fake",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 0,
+            "supporting_count": 1,
+            "contradicting_count": 2,
+            "neutral_count": 0,
+            "avg_similarity": 0.4289,
+            "max_similarity": 0.4583,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": true,
+            "has_supporting_evidence": true,
+            "coverage_assessment": "weak",
+            "quality_score": 0.766
+          },
+          "contradiction_analysis": {
+            "evidence_status": "mixed",
+            "is_contradicted": true,
+            "is_missing": false,
+            "contradiction_strength": 0.414,
+            "support_strength": 0.458,
+            "key_contradictions": [
+              "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism",
+              "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines"
+            ],
+            "key_supports": [
+              "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger"
+            ],
+            "explanation": "Mixed evidence: 1 supporting and 2 contradicting passages found. Requires careful weighing."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.516,
+            "evidence_confidence": 0.34,
+            "model_confidence": 0.85,
+            "alignment_score": 0.5,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 52% (medium uncertainty). Retrieved evidence has weak relevance, reducing confidence.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.6445,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "STRONG_AGREEMENT",
+        "consensus_synthesis": "Strong consensus: Both the statistical classifier and evidence-grounded verification unanimously agree the content is FALSE (top evidence similarity 45.8%).",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+          "title": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 101,
+          "word_count": 13,
+          "evaluated_text": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+          "preview": "Vaccines contain toxic chemicals and microchips injected into human bloodstreams to surveil citizens.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.6445,
+          "confidence": 0.6445,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "STRONG_AGREEMENT",
+          "consensus_synthesis": "Strong consensus: Both the statistical classifier and evidence-grounded verification unanimously agree the content is FALSE (top evidence similarity 45.8%).",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.5556,
+            "prob_fake": 0.5556,
+            "prob_real": 0.4444,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 1,
+            "contradicting_count": 2,
+            "max_similarity": 0.4583,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p0",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4583,
+                "rank": 1,
+                "stance": "supports",
+                "explanation": "Evidence aligns with and supports the statement."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-002#p0",
+                  "doc_id": "DOC-HEALTH-002",
+                  "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                  "title": "MMR Vaccine Safety and Debunking Autism Link",
+                  "source": "Centers for Disease Control and Prevention (CDC)",
+                  "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                  "category": "health",
+                  "published_date": "2023-11-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4175,
+                "rank": 2,
+                "stance": "contradicts",
+                "explanation": "Passage explicitly refutes or disproves the asserted claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p1",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.411,
+                "rank": 3,
+                "stance": "contradicts",
+                "explanation": "Passage explicitly refutes or disproves the asserted claim."
+              }
+            ],
+            "retrieval_time_ms": 23.36
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5556,
+            "should_flag_for_review": false,
+            "evidence_status": "mixed",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-03",
+      "ground_truth": "REAL",
+      "pred_label": "NEEDS_REVIEW",
+      "confidence": 0.7096,
+      "is_correct": false,
+      "consensus_status": "EVIDENCE_OVERRIDE",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+        "title": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 137,
+        "word_count": 17,
+        "evaluated_text": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+        "preview": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.637,
+        "prob_fake": 0.637,
+        "prob_real": 0.363,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 16.63,
+          "supporting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.9137,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.445,
+              "rank": 2,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ],
+          "contradicting_passages": [],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.9137,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.445,
+              "rank": 2,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-003#p0",
+                "doc_id": "DOC-HEALTH-003",
+                "text": "Antibiotics are vital medications designed exclusively to treat bacterial infections. They are completely ineffective against viral illnesses such as the common cold, seasonal influenza, or COVID-19. Overprescribing or prematurely discontinuing antibiotic courses promotes the emergence of antibiotic-resistant superbugs, creating dangerous strains that evade conventional medical treatment.",
+                "title": "Antibiotic Resistance and Proper Usage Guidelines",
+                "source": "National Institutes of Health (NIH)",
+                "source_url": "https://www.nih.gov/health-information/antibiotic-resistance",
+                "category": "health",
+                "published_date": "2024-03-01",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 1
+                }
+              },
+              "score": 0.4107,
+              "rank": 3,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "NEEDS_REVIEW",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Fake",
+          "reasoning": "LLM verdict 'FALSE' conflicts with evidence distribution. Alignment score: 10%. LLM reasoning: Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base. | Verdict-evidence misalignment detected.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 1,
+            "supporting_count": 2,
+            "contradicting_count": 0,
+            "neutral_count": 1,
+            "avg_similarity": 0.5898,
+            "max_similarity": 0.9137,
+            "has_sufficient_evidence": true,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": true,
+            "coverage_assessment": "moderate",
+            "quality_score": 0.873
+          },
+          "contradiction_analysis": {
+            "evidence_status": "supported",
+            "is_contradicted": false,
+            "is_missing": false,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.679,
+            "key_contradictions": [],
+            "key_supports": [
+              "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger",
+              "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines"
+            ],
+            "explanation": "2 passage(s) support the claim with average relevance score of 0.68. No contradicting evidence found."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.549,
+            "evidence_confidence": 0.68,
+            "model_confidence": 0.85,
+            "alignment_score": 0.1,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 55% (medium uncertainty). Warning: The 'FALSE' verdict has low alignment with the evidence distribution (10%), suggesting potential model hallucination.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "NEEDS_REVIEW",
+        "hybrid_verdict": "NEEDS_REVIEW",
+        "badge_color": "amber",
+        "calibrated_confidence": 0.7096,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "EVIDENCE_OVERRIDE",
+        "consensus_synthesis": "Evidence override: While stylistic classifier flagged 'Fake', authoritative evidence supports the claims (2 corroborating passages). Factual verification overrides surface-level text style.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+          "title": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 137,
+          "word_count": 17,
+          "evaluated_text": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+          "preview": "Extensive international scientific surveillance confirms that mRNA COVID-19 vaccines are safe and effective at preventing severe illness.",
+          "verdict": "NEEDS_REVIEW",
+          "final_verdict": "NEEDS_REVIEW",
+          "badge_color": "amber",
+          "calibrated_confidence": 0.7096,
+          "confidence": 0.7096,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "EVIDENCE_OVERRIDE",
+          "consensus_synthesis": "Evidence override: While stylistic classifier flagged 'Fake', authoritative evidence supports the claims (2 corroborating passages). Factual verification overrides surface-level text style.",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.637,
+            "prob_fake": 0.637,
+            "prob_real": 0.363,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 2,
+            "contradicting_count": 0,
+            "max_similarity": 0.9137,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p0",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.9137,
+                "rank": 1,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p1",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.445,
+                "rank": 2,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-003#p0",
+                  "doc_id": "DOC-HEALTH-003",
+                  "text": "Antibiotics are vital medications designed exclusively to treat bacterial infections. They are completely ineffective against viral illnesses such as the common cold, seasonal influenza, or COVID-19. Overprescribing or prematurely discontinuing antibiotic courses promotes the emergence of antibiotic-resistant superbugs, creating dangerous strains that evade conventional medical treatment.",
+                  "title": "Antibiotic Resistance and Proper Usage Guidelines",
+                  "source": "National Institutes of Health (NIH)",
+                  "source_url": "https://www.nih.gov/health-information/antibiotic-resistance",
+                  "category": "health",
+                  "published_date": "2024-03-01",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 1
+                  }
+                },
+                "score": 0.4107,
+                "rank": 3,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              }
+            ],
+            "retrieval_time_ms": 16.63
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "NEEDS_REVIEW",
+            "reasoning": "LLM verdict 'FALSE' conflicts with evidence distribution. Alignment score: 10%. LLM reasoning: Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base. | Verdict-evidence misalignment detected.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.637,
+            "should_flag_for_review": false,
+            "evidence_status": "supported",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-04",
+      "ground_truth": "FAKE",
+      "pred_label": "FAKE",
+      "confidence": 0.6355,
+      "is_correct": true,
+      "consensus_status": "EVIDENCE_OVERRIDE",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+        "title": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 103,
+        "word_count": 15,
+        "evaluated_text": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+        "preview": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+        "verdict": "Real",
+        "label_id": 0,
+        "confidence": 0.5444,
+        "prob_fake": 0.4556,
+        "prob_real": 0.5444,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 10.97,
+          "supporting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.6102,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ],
+          "contradicting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4755,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3969,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            }
+          ],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p0",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.6102,
+              "rank": 1,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-001#p1",
+                "doc_id": "DOC-HEALTH-001",
+                "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                "source": "World Health Organization (WHO)",
+                "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                "category": "health",
+                "published_date": "2024-01-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4755,
+              "rank": 2,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-002#p0",
+                "doc_id": "DOC-HEALTH-002",
+                "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                "title": "MMR Vaccine Safety and Debunking Autism Link",
+                "source": "Centers for Disease Control and Prevention (CDC)",
+                "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                "category": "health",
+                "published_date": "2023-11-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3969,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Real",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 1,
+            "supporting_count": 1,
+            "contradicting_count": 2,
+            "neutral_count": 0,
+            "avg_similarity": 0.4942,
+            "max_similarity": 0.6102,
+            "has_sufficient_evidence": true,
+            "has_contradictory_evidence": true,
+            "has_supporting_evidence": true,
+            "coverage_assessment": "moderate",
+            "quality_score": 0.809
+          },
+          "contradiction_analysis": {
+            "evidence_status": "mixed",
+            "is_contradicted": true,
+            "is_missing": false,
+            "contradiction_strength": 0.436,
+            "support_strength": 0.61,
+            "key_contradictions": [
+              "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines",
+              "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism"
+            ],
+            "key_supports": [
+              "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger"
+            ],
+            "explanation": "Mixed evidence: 1 supporting and 2 contradicting passages found. Requires careful weighing."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.597,
+            "evidence_confidence": 0.52,
+            "model_confidence": 0.85,
+            "alignment_score": 0.5,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 60% (medium uncertainty).",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.6355,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "EVIDENCE_OVERRIDE",
+        "consensus_synthesis": "Evidence override: While statistical styling suggested 'Real', authoritative retrieved evidence directly contradicts the claim (2 refuting passages). Evidence takes precedence over linguistic styling.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+          "title": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 103,
+          "word_count": 15,
+          "evaluated_text": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+          "preview": "COVID-19 vaccines alter human DNA permanently and cause total immune system collapse within six months.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.6355,
+          "confidence": 0.6355,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "EVIDENCE_OVERRIDE",
+          "consensus_synthesis": "Evidence override: While statistical styling suggested 'Real', authoritative retrieved evidence directly contradicts the claim (2 refuting passages). Evidence takes precedence over linguistic styling.",
+          "statistical": {
+            "verdict": "Real",
+            "confidence": 0.5444,
+            "prob_fake": 0.4556,
+            "prob_real": 0.5444,
+            "label_id": 0
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 1,
+            "contradicting_count": 2,
+            "max_similarity": 0.6102,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p0",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Extensive international scientific surveillance and clinical trials confirm that COVID-19 vaccines are safe and highly effective at preventing severe illness, hospitalization, and death. The messenger RNA (mRNA) in vaccines instructs cells to produce a harmless spike protein that triggers an immune response.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.6102,
+                "rank": 1,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-001#p1",
+                  "doc_id": "DOC-HEALTH-001",
+                  "text": "Crucially, mRNA never enters the nucleus of human cells where DNA is kept; it breaks down naturally within cells shortly after delivering instructions. Scientific consensus confirms that mRNA vaccines cannot alter, integrate into, or modify human DNA in any way.",
+                  "title": "Safety and Mechanism of Action of mRNA COVID-19 Vaccines",
+                  "source": "World Health Organization (WHO)",
+                  "source_url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-(covid-19)-vaccines-safety",
+                  "category": "health",
+                  "published_date": "2024-01-15",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4755,
+                "rank": 2,
+                "stance": "contradicts",
+                "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-002#p0",
+                  "doc_id": "DOC-HEALTH-002",
+                  "text": "Multiple rigorous, large-scale epidemiological studies conducted over more than two decades across several countries have found no link between the measles, mumps, and rubella (MMR) vaccine and autism. The original 1998 study claiming a connection was fully retracted by the journal The Lancet after investigations revealed fraudulent data, ethical violations, and undisclosed conflicts of interest.",
+                  "title": "MMR Vaccine Safety and Debunking Autism Link",
+                  "source": "Centers for Disease Control and Prevention (CDC)",
+                  "source_url": "https://www.cdc.gov/vaccinesafety/concerns/autism.html",
+                  "category": "health",
+                  "published_date": "2023-11-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.3969,
+                "rank": 3,
+                "stance": "contradicts",
+                "explanation": "Passage refutes the premise of the claim with authoritative evidence."
+              }
+            ],
+            "retrieval_time_ms": 10.97
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5444,
+            "should_flag_for_review": false,
+            "evidence_status": "mixed",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-05",
+      "ground_truth": "REAL",
+      "pred_label": "NEEDS_REVIEW",
+      "confidence": 0.633,
+      "is_correct": false,
+      "consensus_status": "PARTIAL_ALIGNMENT",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+        "title": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 103,
+        "word_count": 13,
+        "evaluated_text": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+        "preview": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+        "verdict": "Real",
+        "label_id": 0,
+        "confidence": 0.5412,
+        "prob_fake": 0.4588,
+        "prob_real": 0.5412,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 13.66,
+          "supporting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-002#p0",
+                "doc_id": "DOC-SPACE-002",
+                "text": "Extensive orbital radar observations and rover ground analyses confirm that Mars possesses significant reserves of water, primarily in the form of subsurface water ice and polar ice caps. Subsurface radar sounding by Mars Express and the Mars Reconnaissance Orbiter detected ice deposits beneath the Martian surface.",
+                "title": "Discovery and Evidence of Water on Mars",
+                "source": "NASA Jet Propulsion Laboratory (JPL)",
+                "source_url": "https://mars.nasa.gov/all-about-mars/facts/",
+                "category": "space",
+                "published_date": "2024-02-10",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4252,
+              "rank": 2,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-001#p1",
+                "doc_id": "DOC-SPACE-001",
+                "text": "Concrete scientific evidence includes 842 pounds (382 kilograms) of lunar rocks and soil verified by independent scientists globally, retroreflectors placed on the lunar surface that continue to bounce laser beams back to Earth observatories today, and high-resolution orbital photographs captured by NASA's Lunar Reconnaissance Orbiter (LRO) showing descent stages and rover tracks.",
+                "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                "source": "NASA History and Lunar Exploration",
+                "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                "category": "space",
+                "published_date": "2023-07-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 3
+                }
+              },
+              "score": 0.3866,
+              "rank": 3,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ],
+          "contradicting_passages": [],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-002#p1",
+                "doc_id": "DOC-SPACE-002",
+                "text": "While liquid surface water cannot remain stable long-term due to Mars's thin atmosphere and freezing temperatures, hydrated minerals and recurring seasonal features provide proof of an active Martian water cycle in its ancient past.",
+                "title": "Discovery and Evidence of Water on Mars",
+                "source": "NASA Jet Propulsion Laboratory (JPL)",
+                "source_url": "https://mars.nasa.gov/all-about-mars/facts/",
+                "category": "space",
+                "published_date": "2024-02-10",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4572,
+              "rank": 1,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-002#p0",
+                "doc_id": "DOC-SPACE-002",
+                "text": "Extensive orbital radar observations and rover ground analyses confirm that Mars possesses significant reserves of water, primarily in the form of subsurface water ice and polar ice caps. Subsurface radar sounding by Mars Express and the Mars Reconnaissance Orbiter detected ice deposits beneath the Martian surface.",
+                "title": "Discovery and Evidence of Water on Mars",
+                "source": "NASA Jet Propulsion Laboratory (JPL)",
+                "source_url": "https://mars.nasa.gov/all-about-mars/facts/",
+                "category": "space",
+                "published_date": "2024-02-10",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4252,
+              "rank": 2,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-001#p1",
+                "doc_id": "DOC-SPACE-001",
+                "text": "Concrete scientific evidence includes 842 pounds (382 kilograms) of lunar rocks and soil verified by independent scientists globally, retroreflectors placed on the lunar surface that continue to bounce laser beams back to Earth observatories today, and high-resolution orbital photographs captured by NASA's Lunar Reconnaissance Orbiter (LRO) showing descent stages and rover tracks.",
+                "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                "source": "NASA History and Lunar Exploration",
+                "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                "category": "space",
+                "published_date": "2023-07-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 3
+                }
+              },
+              "score": 0.3866,
+              "rank": 3,
+              "stance": "supports",
+              "explanation": "Passage provides corroborating factual evidence confirming the claim."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "NEEDS_REVIEW",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Real",
+          "reasoning": "LLM verdict 'FALSE' conflicts with evidence distribution. Alignment score: 10%. LLM reasoning: Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base. | Verdict-evidence misalignment detected.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 0,
+            "supporting_count": 2,
+            "contradicting_count": 0,
+            "neutral_count": 1,
+            "avg_similarity": 0.423,
+            "max_similarity": 0.4572,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": true,
+            "coverage_assessment": "weak",
+            "quality_score": 0.762
+          },
+          "contradiction_analysis": {
+            "evidence_status": "supported",
+            "is_contradicted": false,
+            "is_missing": false,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.406,
+            "key_contradictions": [],
+            "key_supports": [
+              "Extensive orbital radar observations and rover ground analyses confirm that Mars possesses significant reserves of water, primarily in the form of subsurface water ice and polar ice caps. Subsurface r",
+              "Concrete scientific evidence includes 842 pounds (382 kilograms) of lunar rocks and soil verified by independent scientists globally, retroreflectors placed on the lunar surface that continue to bounc"
+            ],
+            "explanation": "2 passage(s) support the claim with average relevance score of 0.41. No contradicting evidence found."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.468,
+            "evidence_confidence": 0.5,
+            "model_confidence": 0.85,
+            "alignment_score": 0.1,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 47% (medium uncertainty). Retrieved evidence has weak relevance, reducing confidence. Warning: The 'FALSE' verdict has low alignment with the evidence distribution (10%), suggesting potential model hallucination.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "NEEDS_REVIEW",
+        "hybrid_verdict": "NEEDS_REVIEW",
+        "badge_color": "amber",
+        "calibrated_confidence": 0.633,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "PARTIAL_ALIGNMENT",
+        "consensus_synthesis": "Hybrid assessment: Verdict is NEEDS_REVIEW based on supported evidence and statistical probability of 54.1%.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+          "title": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 103,
+          "word_count": 13,
+          "evaluated_text": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+          "preview": "NASA's Perseverance rover detected unambiguous organic molecules and ancient lakebed sediments on Mars.",
+          "verdict": "NEEDS_REVIEW",
+          "final_verdict": "NEEDS_REVIEW",
+          "badge_color": "amber",
+          "calibrated_confidence": 0.633,
+          "confidence": 0.633,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "PARTIAL_ALIGNMENT",
+          "consensus_synthesis": "Hybrid assessment: Verdict is NEEDS_REVIEW based on supported evidence and statistical probability of 54.1%.",
+          "statistical": {
+            "verdict": "Real",
+            "confidence": 0.5412,
+            "prob_fake": 0.4588,
+            "prob_real": 0.5412,
+            "label_id": 0
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 2,
+            "contradicting_count": 0,
+            "max_similarity": 0.4572,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-002#p1",
+                  "doc_id": "DOC-SPACE-002",
+                  "text": "While liquid surface water cannot remain stable long-term due to Mars's thin atmosphere and freezing temperatures, hydrated minerals and recurring seasonal features provide proof of an active Martian water cycle in its ancient past.",
+                  "title": "Discovery and Evidence of Water on Mars",
+                  "source": "NASA Jet Propulsion Laboratory (JPL)",
+                  "source_url": "https://mars.nasa.gov/all-about-mars/facts/",
+                  "category": "space",
+                  "published_date": "2024-02-10",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4572,
+                "rank": 1,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-002#p0",
+                  "doc_id": "DOC-SPACE-002",
+                  "text": "Extensive orbital radar observations and rover ground analyses confirm that Mars possesses significant reserves of water, primarily in the form of subsurface water ice and polar ice caps. Subsurface radar sounding by Mars Express and the Mars Reconnaissance Orbiter detected ice deposits beneath the Martian surface.",
+                  "title": "Discovery and Evidence of Water on Mars",
+                  "source": "NASA Jet Propulsion Laboratory (JPL)",
+                  "source_url": "https://mars.nasa.gov/all-about-mars/facts/",
+                  "category": "space",
+                  "published_date": "2024-02-10",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4252,
+                "rank": 2,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-001#p1",
+                  "doc_id": "DOC-SPACE-001",
+                  "text": "Concrete scientific evidence includes 842 pounds (382 kilograms) of lunar rocks and soil verified by independent scientists globally, retroreflectors placed on the lunar surface that continue to bounce laser beams back to Earth observatories today, and high-resolution orbital photographs captured by NASA's Lunar Reconnaissance Orbiter (LRO) showing descent stages and rover tracks.",
+                  "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                  "source": "NASA History and Lunar Exploration",
+                  "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                  "category": "space",
+                  "published_date": "2023-07-20",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 3
+                  }
+                },
+                "score": 0.3866,
+                "rank": 3,
+                "stance": "supports",
+                "explanation": "Passage provides corroborating factual evidence confirming the claim."
+              }
+            ],
+            "retrieval_time_ms": 13.66
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "NEEDS_REVIEW",
+            "reasoning": "LLM verdict 'FALSE' conflicts with evidence distribution. Alignment score: 10%. LLM reasoning: Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base. | Verdict-evidence misalignment detected.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5412,
+            "should_flag_for_review": false,
+            "evidence_status": "supported",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-06",
+      "ground_truth": "FAKE",
+      "pred_label": "FAKE",
+      "confidence": 0.6553,
+      "is_correct": true,
+      "consensus_status": "STRONG_AGREEMENT",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+        "title": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 99,
+        "word_count": 16,
+        "evaluated_text": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+        "preview": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.5691,
+        "prob_fake": 0.5691,
+        "prob_real": 0.4309,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 12.95,
+          "supporting_passages": [],
+          "contradicting_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-001#p2",
+                "doc_id": "DOC-SPACE-001",
+                "text": "Claims that the landings were staged in a television studio are thoroughly contradicted by thousands of hours of telemetry, worldwide tracking by foreign powers including the Soviet Union, and physical samples.",
+                "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                "source": "NASA History and Lunar Exploration",
+                "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                "category": "space",
+                "published_date": "2023-07-20",
+                "metadata": {
+                  "chunk_index": 2,
+                  "total_chunks": 3
+                }
+              },
+              "score": 0.4072,
+              "rank": 1,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-003#p1",
+                "doc_id": "DOC-SPACE-003",
+                "text": "Claims that the Earth is a flat plane are completely refuted by gravitational physics, lunar eclipses casting circular Earth shadows, and real-time orbital video feeds from the International Space Station.",
+                "title": "Geodetic and Orbital Proof of Earth's Spherical Curvature",
+                "source": "European Space Agency (ESA)",
+                "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Earth_observation",
+                "category": "space",
+                "published_date": "2023-09-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3019,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            }
+          ],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-001#p2",
+                "doc_id": "DOC-SPACE-001",
+                "text": "Claims that the landings were staged in a television studio are thoroughly contradicted by thousands of hours of telemetry, worldwide tracking by foreign powers including the Soviet Union, and physical samples.",
+                "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                "source": "NASA History and Lunar Exploration",
+                "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                "category": "space",
+                "published_date": "2023-07-20",
+                "metadata": {
+                  "chunk_index": 2,
+                  "total_chunks": 3
+                }
+              },
+              "score": 0.4072,
+              "rank": 1,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-001#p0",
+                "doc_id": "DOC-SPACE-001",
+                "text": "Between 1969 and 1972, six Apollo missions successfully landed twelve human astronauts on the Moon.",
+                "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                "source": "NASA History and Lunar Exploration",
+                "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                "category": "space",
+                "published_date": "2023-07-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 3
+                }
+              },
+              "score": 0.3979,
+              "rank": 2,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-SPACE-003#p1",
+                "doc_id": "DOC-SPACE-003",
+                "text": "Claims that the Earth is a flat plane are completely refuted by gravitational physics, lunar eclipses casting circular Earth shadows, and real-time orbital video feeds from the International Space Station.",
+                "title": "Geodetic and Orbital Proof of Earth's Spherical Curvature",
+                "source": "European Space Agency (ESA)",
+                "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Earth_observation",
+                "category": "space",
+                "published_date": "2023-09-15",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3019,
+              "rank": 3,
+              "stance": "contradicts",
+              "explanation": "Passage explicitly refutes or disproves the asserted claim."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Fake",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 0,
+            "supporting_count": 0,
+            "contradicting_count": 2,
+            "neutral_count": 1,
+            "avg_similarity": 0.369,
+            "max_similarity": 0.4072,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": true,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "weak",
+            "quality_score": 0.726
+          },
+          "contradiction_analysis": {
+            "evidence_status": "contradicted",
+            "is_contradicted": true,
+            "is_missing": false,
+            "contradiction_strength": 0.407,
+            "support_strength": 0.0,
+            "key_contradictions": [
+              "Claims that the landings were staged in a television studio are thoroughly contradicted by thousands of hours of telemetry, worldwide tracking by foreign powers including the Soviet Union, and physica"
+            ],
+            "key_supports": [],
+            "explanation": "1 passage(s) directly contradict the claim with average relevance score of 0.41. No supporting evidence found."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.708,
+            "evidence_confidence": 0.5,
+            "model_confidence": 0.85,
+            "alignment_score": 0.9,
+            "uncertainty_level": "low",
+            "explanation": "Overall confidence: 71% (low uncertainty). Retrieved evidence has weak relevance, reducing confidence.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.6553,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "STRONG_AGREEMENT",
+        "consensus_synthesis": "Strong consensus: Both the statistical classifier and evidence-grounded verification unanimously agree the content is FALSE (top evidence similarity 40.7%).",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+          "title": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 99,
+          "word_count": 16,
+          "evaluated_text": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+          "preview": "The Apollo 11 moon landing was staged in a Hollywood television studio directed by Stanley Kubrick.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.6553,
+          "confidence": 0.6553,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "STRONG_AGREEMENT",
+          "consensus_synthesis": "Strong consensus: Both the statistical classifier and evidence-grounded verification unanimously agree the content is FALSE (top evidence similarity 40.7%).",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.5691,
+            "prob_fake": 0.5691,
+            "prob_real": 0.4309,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 0,
+            "contradicting_count": 2,
+            "max_similarity": 0.4072,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-001#p2",
+                  "doc_id": "DOC-SPACE-001",
+                  "text": "Claims that the landings were staged in a television studio are thoroughly contradicted by thousands of hours of telemetry, worldwide tracking by foreign powers including the Soviet Union, and physical samples.",
+                  "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                  "source": "NASA History and Lunar Exploration",
+                  "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                  "category": "space",
+                  "published_date": "2023-07-20",
+                  "metadata": {
+                    "chunk_index": 2,
+                    "total_chunks": 3
+                  }
+                },
+                "score": 0.4072,
+                "rank": 1,
+                "stance": "contradicts",
+                "explanation": "Passage explicitly refutes or disproves the asserted claim."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-001#p0",
+                  "doc_id": "DOC-SPACE-001",
+                  "text": "Between 1969 and 1972, six Apollo missions successfully landed twelve human astronauts on the Moon.",
+                  "title": "Apollo Moon Landings Evidence and Lunar Sample Verification",
+                  "source": "NASA History and Lunar Exploration",
+                  "source_url": "https://www.nasa.gov/mission/apollo-11/",
+                  "category": "space",
+                  "published_date": "2023-07-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 3
+                  }
+                },
+                "score": 0.3979,
+                "rank": 2,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-SPACE-003#p1",
+                  "doc_id": "DOC-SPACE-003",
+                  "text": "Claims that the Earth is a flat plane are completely refuted by gravitational physics, lunar eclipses casting circular Earth shadows, and real-time orbital video feeds from the International Space Station.",
+                  "title": "Geodetic and Orbital Proof of Earth's Spherical Curvature",
+                  "source": "European Space Agency (ESA)",
+                  "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Earth_observation",
+                  "category": "space",
+                  "published_date": "2023-09-15",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.3019,
+                "rank": 3,
+                "stance": "contradicts",
+                "explanation": "Passage explicitly refutes or disproves the asserted claim."
+              }
+            ],
+            "retrieval_time_ms": 12.95
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5691,
+            "should_flag_for_review": false,
+            "evidence_status": "contradicted",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-07",
+      "ground_truth": "REAL",
+      "pred_label": "FAKE",
+      "confidence": 0.4059,
+      "is_correct": false,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+        "title": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 143,
+        "word_count": 16,
+        "evaluated_text": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+        "preview": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+        "verdict": "Real",
+        "label_id": 0,
+        "confidence": 0.6765,
+        "prob_fake": 0.3235,
+        "prob_real": 0.6765,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 13.42,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-001#p0",
+                "doc_id": "DOC-CLIMATE-001",
+                "text": "It is unequivocal that human influence has warmed the atmosphere, ocean, and land. Global surface temperature has increased by approximately 1.1 degrees Celsius compared to pre-industrial levels, driven overwhelmingly by greenhouse gas emissions from burning fossil fuels, deforestation, and industrial activity.",
+                "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                "category": "climate",
+                "published_date": "2023-03-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.7658,
+              "rank": 1,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-002#p0",
+                "doc_id": "DOC-CLIMATE-002",
+                "text": "Satellite altimetry records documented since 1993 show that global average sea levels are rising at an accelerating rate, currently exceeding 3.4 millimeters per year. The two primary driving factors are thermal expansion of warming ocean water and the melting of land-based ice sheets in Greenland and Antarctica, accompanied by mountain glacier loss.",
+                "title": "Global Sea Level Rise and Coastal Ice Sheet Observations",
+                "source": "National Oceanic and Atmospheric Administration (NOAA)",
+                "source_url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+                "category": "climate",
+                "published_date": "2024-01-10",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.5315,
+              "rank": 2,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-001#p1",
+                "doc_id": "DOC-CLIMATE-001",
+                "text": "Observed impacts include accelerated glacial retreat, rising global mean sea levels, and increased frequency of extreme heatwaves, intense droughts, and severe precipitation events across every inhabited continent.",
+                "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                "category": "climate",
+                "published_date": "2023-03-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4349,
+              "rank": 3,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Real",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 2,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 3,
+            "avg_similarity": 0.5774,
+            "max_similarity": 0.7658,
+            "has_sufficient_evidence": true,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "strong",
+            "quality_score": 0.715
+          },
+          "contradiction_analysis": {
+            "evidence_status": "insufficient",
+            "is_contradicted": false,
+            "is_missing": false,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "3 passage(s) retrieved with neutral stance. Evidence provides context but does not clearly support or contradict."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.582,
+            "evidence_confidence": 0.62,
+            "model_confidence": 0.85,
+            "alignment_score": 0.3,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 58% (medium uncertainty). Strong evidence coverage supports the reliability of this assessment. Warning: The 'FALSE' verdict has low alignment with the evidence distribution (30%), suggesting potential model hallucination.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.4059,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Real' (67.7%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+          "title": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 143,
+          "word_count": 16,
+          "evaluated_text": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+          "preview": "Global average surface temperatures have risen substantially since pre-industrial times driven primarily by anthropogenic greenhouse emissions.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.4059,
+          "confidence": 0.4059,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Real' (67.7%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Real",
+            "confidence": 0.6765,
+            "prob_fake": 0.3235,
+            "prob_real": 0.6765,
+            "label_id": 0
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.7658,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-001#p0",
+                  "doc_id": "DOC-CLIMATE-001",
+                  "text": "It is unequivocal that human influence has warmed the atmosphere, ocean, and land. Global surface temperature has increased by approximately 1.1 degrees Celsius compared to pre-industrial levels, driven overwhelmingly by greenhouse gas emissions from burning fossil fuels, deforestation, and industrial activity.",
+                  "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                  "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                  "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                  "category": "climate",
+                  "published_date": "2023-03-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.7658,
+                "rank": 1,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-002#p0",
+                  "doc_id": "DOC-CLIMATE-002",
+                  "text": "Satellite altimetry records documented since 1993 show that global average sea levels are rising at an accelerating rate, currently exceeding 3.4 millimeters per year. The two primary driving factors are thermal expansion of warming ocean water and the melting of land-based ice sheets in Greenland and Antarctica, accompanied by mountain glacier loss.",
+                  "title": "Global Sea Level Rise and Coastal Ice Sheet Observations",
+                  "source": "National Oceanic and Atmospheric Administration (NOAA)",
+                  "source_url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+                  "category": "climate",
+                  "published_date": "2024-01-10",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.5315,
+                "rank": 2,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-001#p1",
+                  "doc_id": "DOC-CLIMATE-001",
+                  "text": "Observed impacts include accelerated glacial retreat, rising global mean sea levels, and increased frequency of extreme heatwaves, intense droughts, and severe precipitation events across every inhabited continent.",
+                  "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                  "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                  "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                  "category": "climate",
+                  "published_date": "2023-03-20",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4349,
+                "rank": 3,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              }
+            ],
+            "retrieval_time_ms": 13.42
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.6765,
+            "should_flag_for_review": false,
+            "evidence_status": "insufficient",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-08",
+      "ground_truth": "FAKE",
+      "pred_label": "FAKE",
+      "confidence": 0.4115,
+      "is_correct": true,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+        "title": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 99,
+        "word_count": 14,
+        "evaluated_text": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+        "preview": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.6859,
+        "prob_fake": 0.6859,
+        "prob_real": 0.3141,
+        "evidence": {
+          "total_retrieved": 3,
+          "retrieval_time_ms": 12.81,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-001#p0",
+                "doc_id": "DOC-CLIMATE-001",
+                "text": "It is unequivocal that human influence has warmed the atmosphere, ocean, and land. Global surface temperature has increased by approximately 1.1 degrees Celsius compared to pre-industrial levels, driven overwhelmingly by greenhouse gas emissions from burning fossil fuels, deforestation, and industrial activity.",
+                "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                "category": "climate",
+                "published_date": "2023-03-20",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.4461,
+              "rank": 1,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-002#p0",
+                "doc_id": "DOC-CLIMATE-002",
+                "text": "Satellite altimetry records documented since 1993 show that global average sea levels are rising at an accelerating rate, currently exceeding 3.4 millimeters per year. The two primary driving factors are thermal expansion of warming ocean water and the melting of land-based ice sheets in Greenland and Antarctica, accompanied by mountain glacier loss.",
+                "title": "Global Sea Level Rise and Coastal Ice Sheet Observations",
+                "source": "National Oceanic and Atmospheric Administration (NOAA)",
+                "source_url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+                "category": "climate",
+                "published_date": "2024-01-10",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3458,
+              "rank": 2,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            },
+            {
+              "passage": {
+                "passage_id": "DOC-CLIMATE-001#p1",
+                "doc_id": "DOC-CLIMATE-001",
+                "text": "Observed impacts include accelerated glacial retreat, rising global mean sea levels, and increased frequency of extreme heatwaves, intense droughts, and severe precipitation events across every inhabited continent.",
+                "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                "category": "climate",
+                "published_date": "2023-03-20",
+                "metadata": {
+                  "chunk_index": 1,
+                  "total_chunks": 2
+                }
+              },
+              "score": 0.3277,
+              "rank": 3,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Fake",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 3,
+            "high_relevance_count": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 3,
+            "avg_similarity": 0.3732,
+            "max_similarity": 0.4461,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "weak",
+            "quality_score": 0.579
+          },
+          "contradiction_analysis": {
+            "evidence_status": "insufficient",
+            "is_contradicted": false,
+            "is_missing": true,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "3 passage(s) retrieved but none with sufficient relevance scores (>0.35). Evidence is insufficient to reach a verdict."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.419,
+            "evidence_confidence": 0.26,
+            "model_confidence": 0.85,
+            "alignment_score": 0.3,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 42% (medium uncertainty). Retrieved evidence has weak relevance, reducing confidence. Warning: The 'FALSE' verdict has low alignment with the evidence distribution (30%), suggesting potential model hallucination.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.4115,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (68.6%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+          "title": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 99,
+          "word_count": 14,
+          "evaluated_text": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+          "preview": "Global warming is a complete hoax concocted by scientists to destroy western industrial capitalism.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.4115,
+          "confidence": 0.4115,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (68.6%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.6859,
+            "prob_fake": 0.6859,
+            "prob_real": 0.3141,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 3,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.4461,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-001#p0",
+                  "doc_id": "DOC-CLIMATE-001",
+                  "text": "It is unequivocal that human influence has warmed the atmosphere, ocean, and land. Global surface temperature has increased by approximately 1.1 degrees Celsius compared to pre-industrial levels, driven overwhelmingly by greenhouse gas emissions from burning fossil fuels, deforestation, and industrial activity.",
+                  "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                  "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                  "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                  "category": "climate",
+                  "published_date": "2023-03-20",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.4461,
+                "rank": 1,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-002#p0",
+                  "doc_id": "DOC-CLIMATE-002",
+                  "text": "Satellite altimetry records documented since 1993 show that global average sea levels are rising at an accelerating rate, currently exceeding 3.4 millimeters per year. The two primary driving factors are thermal expansion of warming ocean water and the melting of land-based ice sheets in Greenland and Antarctica, accompanied by mountain glacier loss.",
+                  "title": "Global Sea Level Rise and Coastal Ice Sheet Observations",
+                  "source": "National Oceanic and Atmospheric Administration (NOAA)",
+                  "source_url": "https://oceanservice.noaa.gov/facts/sealevel.html",
+                  "category": "climate",
+                  "published_date": "2024-01-10",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.3458,
+                "rank": 2,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              },
+              {
+                "passage": {
+                  "passage_id": "DOC-CLIMATE-001#p1",
+                  "doc_id": "DOC-CLIMATE-001",
+                  "text": "Observed impacts include accelerated glacial retreat, rising global mean sea levels, and increased frequency of extreme heatwaves, intense droughts, and severe precipitation events across every inhabited continent.",
+                  "title": "IPCC Sixth Assessment: Anthropogenic Drivers of Global Climate Change",
+                  "source": "Intergovernmental Panel on Climate Change (IPCC)",
+                  "source_url": "https://www.ipcc.ch/report/ar6/syr/",
+                  "category": "climate",
+                  "published_date": "2023-03-20",
+                  "metadata": {
+                    "chunk_index": 1,
+                    "total_chunks": 2
+                  }
+                },
+                "score": 0.3277,
+                "rank": 3,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              }
+            ],
+            "retrieval_time_ms": 12.81
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.6859,
+            "should_flag_for_review": false,
+            "evidence_status": "insufficient",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-09",
+      "ground_truth": "FAKE",
+      "pred_label": "FAKE",
+      "confidence": 0.3018,
+      "is_correct": true,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+        "title": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 107,
+        "word_count": 13,
+        "evaluated_text": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+        "preview": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+        "verdict": "Real",
+        "label_id": 0,
+        "confidence": 0.503,
+        "prob_fake": 0.497,
+        "prob_real": 0.503,
+        "evidence": {
+          "total_retrieved": 1,
+          "retrieval_time_ms": 12.41,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": [
+            {
+              "passage": {
+                "passage_id": "DOC-HEALTH-003#p0",
+                "doc_id": "DOC-HEALTH-003",
+                "text": "Antibiotics are vital medications designed exclusively to treat bacterial infections. They are completely ineffective against viral illnesses such as the common cold, seasonal influenza, or COVID-19. Overprescribing or prematurely discontinuing antibiotic courses promotes the emergence of antibiotic-resistant superbugs, creating dangerous strains that evade conventional medical treatment.",
+                "title": "Antibiotic Resistance and Proper Usage Guidelines",
+                "source": "National Institutes of Health (NIH)",
+                "source_url": "https://www.nih.gov/health-information/antibiotic-resistance",
+                "category": "health",
+                "published_date": "2024-03-01",
+                "metadata": {
+                  "chunk_index": 0,
+                  "total_chunks": 1
+                }
+              },
+              "score": 0.5796,
+              "rank": 1,
+              "stance": "neutral",
+              "explanation": "Passage provides related contextual information."
+            }
+          ]
+        },
+        "verification": {
+          "final_verdict": "FALSE",
+          "llm_verdict": "FALSE",
+          "statistical_verdict": "Real",
+          "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+          "evidence_citations": [
+            "DOC-MOCK-01#p0"
+          ],
+          "contradictions_found": true,
+          "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+          "evidence_quality": {
+            "total_passages": 1,
+            "high_relevance_count": 1,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 1,
+            "avg_similarity": 0.5796,
+            "max_similarity": 0.5796,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "moderate",
+            "quality_score": 0.596
+          },
+          "contradiction_analysis": {
+            "evidence_status": "insufficient",
+            "is_contradicted": false,
+            "is_missing": false,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "1 passage(s) retrieved with neutral stance. Evidence provides context but does not clearly support or contradict."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.5,
+            "evidence_confidence": 0.44,
+            "model_confidence": 0.85,
+            "alignment_score": 0.3,
+            "uncertainty_level": "medium",
+            "explanation": "Overall confidence: 50% (medium uncertainty). Warning: The 'FALSE' verdict has low alignment with the evidence distribution (30%), suggesting potential model hallucination.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "FALSE",
+        "hybrid_verdict": "FALSE",
+        "badge_color": "crimson",
+        "calibrated_confidence": 0.3018,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Real' (50.3%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+          "title": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 107,
+          "word_count": 13,
+          "evaluated_text": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+          "preview": "Recent pharmaceutical white papers indicate that all synthetic antibiotics cause spontaneous heart failure.",
+          "verdict": "FALSE",
+          "final_verdict": "FALSE",
+          "badge_color": "crimson",
+          "calibrated_confidence": 0.3018,
+          "confidence": 0.3018,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence insufficient). Final verdict is UNVERIFIABLE. Statistical model predicts 'Real' (50.3%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Real",
+            "confidence": 0.503,
+            "prob_fake": 0.497,
+            "prob_real": 0.503,
+            "label_id": 0
+          },
+          "evidence": {
+            "total_retrieved": 1,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.5796,
+            "avg_credibility": 1.0,
+            "all_passages": [
+              {
+                "passage": {
+                  "passage_id": "DOC-HEALTH-003#p0",
+                  "doc_id": "DOC-HEALTH-003",
+                  "text": "Antibiotics are vital medications designed exclusively to treat bacterial infections. They are completely ineffective against viral illnesses such as the common cold, seasonal influenza, or COVID-19. Overprescribing or prematurely discontinuing antibiotic courses promotes the emergence of antibiotic-resistant superbugs, creating dangerous strains that evade conventional medical treatment.",
+                  "title": "Antibiotic Resistance and Proper Usage Guidelines",
+                  "source": "National Institutes of Health (NIH)",
+                  "source_url": "https://www.nih.gov/health-information/antibiotic-resistance",
+                  "category": "health",
+                  "published_date": "2024-03-01",
+                  "metadata": {
+                    "chunk_index": 0,
+                    "total_chunks": 1
+                  }
+                },
+                "score": 0.5796,
+                "rank": 1,
+                "stance": "neutral",
+                "explanation": "Passage provides related contextual information."
+              }
+            ],
+            "retrieval_time_ms": 12.41
+          },
+          "verification": {
+            "llm_verdict": "FALSE",
+            "final_verdict": "FALSE",
+            "reasoning": "Retrieved evidence directly contradicts the core assertions of this claim. Multiple authoritative sources refute the key premise.",
+            "evidence_citations": [
+              "DOC-MOCK-01#p0"
+            ],
+            "limitations": "Assessment based on retrieved evidence only. Additional context may exist outside the current knowledge base.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.503,
+            "should_flag_for_review": false,
+            "evidence_status": "insufficient",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-10",
+      "ground_truth": "FAKE",
+      "pred_label": "UNVERIFIABLE",
+      "confidence": 0.3433,
+      "is_correct": false,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+        "title": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 113,
+        "word_count": 15,
+        "evaluated_text": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+        "preview": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.5722,
+        "prob_fake": 0.5722,
+        "prob_real": 0.4278,
+        "evidence": {
+          "total_retrieved": 0,
+          "retrieval_time_ms": 12.45,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": []
+        },
+        "verification": {
+          "final_verdict": "UNVERIFIABLE",
+          "llm_verdict": "UNVERIFIABLE",
+          "statistical_verdict": "Fake",
+          "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+          "evidence_citations": [],
+          "contradictions_found": false,
+          "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+          "evidence_quality": {
+            "total_passages": 0,
+            "high_relevance_count": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 0,
+            "avg_similarity": 0.0,
+            "max_similarity": 0.0,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "none",
+            "quality_score": 0.0
+          },
+          "contradiction_analysis": {
+            "evidence_status": "absent",
+            "is_contradicted": false,
+            "is_missing": true,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "No evidence passages were retrieved. The claim cannot be verified or refuted \u2014 it falls outside the current knowledge base."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.39,
+            "evidence_confidence": 0.1,
+            "model_confidence": 0.3,
+            "alignment_score": 0.9,
+            "uncertainty_level": "high",
+            "explanation": "Overall confidence: 39% (high uncertainty). No evidence was retrieved, severely limiting verification reliability.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "UNVERIFIABLE",
+        "hybrid_verdict": "UNVERIFIABLE",
+        "badge_color": "slate",
+        "calibrated_confidence": 0.3433,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (57.2%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+          "title": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 113,
+          "word_count": 15,
+          "evaluated_text": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+          "preview": "According to official municipal bulletins, local council members voted to construct a subterranean maglev tunnel.",
+          "verdict": "UNVERIFIABLE",
+          "final_verdict": "UNVERIFIABLE",
+          "badge_color": "slate",
+          "calibrated_confidence": 0.3433,
+          "confidence": 0.3433,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (57.2%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.5722,
+            "prob_fake": 0.5722,
+            "prob_real": 0.4278,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.0,
+            "avg_credibility": 0.0,
+            "all_passages": [],
+            "retrieval_time_ms": 12.45
+          },
+          "verification": {
+            "llm_verdict": "UNVERIFIABLE",
+            "final_verdict": "UNVERIFIABLE",
+            "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+            "evidence_citations": [],
+            "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5722,
+            "should_flag_for_review": false,
+            "evidence_status": "absent",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-11",
+      "ground_truth": "FAKE",
+      "pred_label": "UNVERIFIABLE",
+      "confidence": 0.3541,
+      "is_correct": true,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+        "title": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 98,
+        "word_count": 13,
+        "evaluated_text": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+        "preview": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.5901,
+        "prob_fake": 0.5901,
+        "prob_real": 0.4099,
+        "evidence": {
+          "total_retrieved": 0,
+          "retrieval_time_ms": 10.97,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": []
+        },
+        "verification": {
+          "final_verdict": "UNVERIFIABLE",
+          "llm_verdict": "UNVERIFIABLE",
+          "statistical_verdict": "Fake",
+          "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+          "evidence_citations": [],
+          "contradictions_found": false,
+          "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+          "evidence_quality": {
+            "total_passages": 0,
+            "high_relevance_count": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 0,
+            "avg_similarity": 0.0,
+            "max_similarity": 0.0,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "none",
+            "quality_score": 0.0
+          },
+          "contradiction_analysis": {
+            "evidence_status": "absent",
+            "is_contradicted": false,
+            "is_missing": true,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "No evidence passages were retrieved. The claim cannot be verified or refuted \u2014 it falls outside the current knowledge base."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.39,
+            "evidence_confidence": 0.1,
+            "model_confidence": 0.3,
+            "alignment_score": 0.9,
+            "uncertainty_level": "high",
+            "explanation": "Overall confidence: 39% (high uncertainty). No evidence was retrieved, severely limiting verification reliability.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "UNVERIFIABLE",
+        "hybrid_verdict": "UNVERIFIABLE",
+        "badge_color": "slate",
+        "calibrated_confidence": 0.3541,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (59.0%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+          "title": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 98,
+          "word_count": 13,
+          "evaluated_text": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+          "preview": "Extraterrestrial explorers established a secret submarine refueling port in Lake Michigan in 1942.",
+          "verdict": "UNVERIFIABLE",
+          "final_verdict": "UNVERIFIABLE",
+          "badge_color": "slate",
+          "calibrated_confidence": 0.3541,
+          "confidence": 0.3541,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (59.0%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.5901,
+            "prob_fake": 0.5901,
+            "prob_real": 0.4099,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.0,
+            "avg_credibility": 0.0,
+            "all_passages": [],
+            "retrieval_time_ms": 10.97
+          },
+          "verification": {
+            "llm_verdict": "UNVERIFIABLE",
+            "final_verdict": "UNVERIFIABLE",
+            "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+            "evidence_citations": [],
+            "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.5901,
+            "should_flag_for_review": false,
+            "evidence_status": "absent",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    },
+    {
+      "id": "TC-12",
+      "ground_truth": "FAKE",
+      "pred_label": "UNVERIFIABLE",
+      "confidence": 0.3682,
+      "is_correct": true,
+      "consensus_status": "UNGROUNDED_HEURISTIC",
+      "raw": {
+        "status": "SUCCESS",
+        "input_type": "claim",
+        "raw_input": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+        "title": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+        "source_url": null,
+        "source_domain": null,
+        "authors": [],
+        "published_date": null,
+        "char_count": 86,
+        "word_count": 13,
+        "evaluated_text": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+        "preview": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+        "verdict": "Fake",
+        "label_id": 1,
+        "confidence": 0.6137,
+        "prob_fake": 0.6137,
+        "prob_real": 0.3863,
+        "evidence": {
+          "total_retrieved": 0,
+          "retrieval_time_ms": 10.73,
+          "supporting_passages": [],
+          "contradicting_passages": [],
+          "all_passages": []
+        },
+        "verification": {
+          "final_verdict": "UNVERIFIABLE",
+          "llm_verdict": "UNVERIFIABLE",
+          "statistical_verdict": "Fake",
+          "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+          "evidence_citations": [],
+          "contradictions_found": false,
+          "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+          "evidence_quality": {
+            "total_passages": 0,
+            "high_relevance_count": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "neutral_count": 0,
+            "avg_similarity": 0.0,
+            "max_similarity": 0.0,
+            "has_sufficient_evidence": false,
+            "has_contradictory_evidence": false,
+            "has_supporting_evidence": false,
+            "coverage_assessment": "none",
+            "quality_score": 0.0
+          },
+          "contradiction_analysis": {
+            "evidence_status": "absent",
+            "is_contradicted": false,
+            "is_missing": true,
+            "contradiction_strength": 0.0,
+            "support_strength": 0.0,
+            "key_contradictions": [],
+            "key_supports": [],
+            "explanation": "No evidence passages were retrieved. The claim cannot be verified or refuted \u2014 it falls outside the current knowledge base."
+          },
+          "uncertainty": {
+            "overall_confidence": 0.39,
+            "evidence_confidence": 0.1,
+            "model_confidence": 0.3,
+            "alignment_score": 0.9,
+            "uncertainty_level": "high",
+            "explanation": "Overall confidence: 39% (high uncertainty). No evidence was retrieved, severely limiting verification reliability.",
+            "should_flag_for_review": false
+          },
+          "model_name": "google/flan-t5-small"
+        },
+        "final_verdict": "UNVERIFIABLE",
+        "hybrid_verdict": "UNVERIFIABLE",
+        "badge_color": "slate",
+        "calibrated_confidence": 0.3682,
+        "uncertainty_level": "high",
+        "should_flag_for_review": false,
+        "consensus_status": "UNGROUNDED_HEURISTIC",
+        "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (61.4%) based solely on stylistic phrasing.",
+        "hybrid_result": {
+          "status": "SUCCESS",
+          "input_type": "claim",
+          "raw_input": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+          "title": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+          "source_url": null,
+          "source_domain": null,
+          "authors": [],
+          "published_date": null,
+          "char_count": 86,
+          "word_count": 13,
+          "evaluated_text": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+          "preview": "Secret volcanic tunnels connect the core of Antarctica directly to the Mariana Trench.",
+          "verdict": "UNVERIFIABLE",
+          "final_verdict": "UNVERIFIABLE",
+          "badge_color": "slate",
+          "calibrated_confidence": 0.3682,
+          "confidence": 0.3682,
+          "uncertainty_level": "high",
+          "should_flag_for_review": false,
+          "consensus_status": "UNGROUNDED_HEURISTIC",
+          "consensus_synthesis": "No verified evidence found in reference corpus (evidence absent). Final verdict is UNVERIFIABLE. Statistical model predicts 'Fake' (61.4%) based solely on stylistic phrasing.",
+          "statistical": {
+            "verdict": "Fake",
+            "confidence": 0.6137,
+            "prob_fake": 0.6137,
+            "prob_real": 0.3863,
+            "label_id": 1
+          },
+          "evidence": {
+            "total_retrieved": 0,
+            "supporting_count": 0,
+            "contradicting_count": 0,
+            "max_similarity": 0.0,
+            "avg_credibility": 0.0,
+            "all_passages": [],
+            "retrieval_time_ms": 10.73
+          },
+          "verification": {
+            "llm_verdict": "UNVERIFIABLE",
+            "final_verdict": "UNVERIFIABLE",
+            "reasoning": "No evidence passages were retrieved for this claim. The claim cannot be verified or refuted based on available evidence. LLM reasoning: No relevant evidence passages were found in the knowledge base. Without evidence, the claim cannot be verified or refuted.",
+            "evidence_citations": [],
+            "limitations": "Assessment limited by absence of relevant evidence in the knowledge base. This does NOT mean the claim is false.",
+            "uncertainty_level": "high",
+            "overall_confidence": 0.6137,
+            "should_flag_for_review": false,
+            "evidence_status": "absent",
+            "model_name": "google/flan-t5-small"
+          }
+        }
+      }
+    }
+  ]
+}

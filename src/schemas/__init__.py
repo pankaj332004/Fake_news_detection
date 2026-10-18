@@ -9,6 +9,11 @@ from src.schemas.evidence import (
     StanceType,
 )
 from src.schemas.request import ArticleDocument, IngestionRequest, InputType
+from src.schemas.response import (
+    AnalysisResponse,
+    VerificationResult,
+    VerificationVerdict,
+)
 
 __all__ = [
     "InputType",
@@ -18,4 +23,7 @@ __all__ = [
     "RetrievalResult",
     "RetrievalResponse",
     "StanceType",
+    "AnalysisResponse",
+    "VerificationResult",
+    "VerificationVerdict",
 ]

@@ -1,0 +1,16 @@
+{
+  "model_type": "TF-IDF + Logistic Regression",
+  "target_column": "label_binary",
+  "max_features": 10000,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "C": 1.0,
+  "class_weight": "balanced",
+  "solver": "lbfgs",
+  "labels": [
+    "Real",
+    "Fake"
+  ]
+}

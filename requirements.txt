@@ -1,0 +1,46 @@
+# Fake News Detection Using LLMs
+# Python 3.11 recommended
+
+# Core data science and dataset handling
+numpy
+pandas
+scikit-learn
+datasets
+joblib
+matplotlib
+
+# Deep learning and NLP
+torch
+transformers
+accelerate
+sentence-transformers
+sentencepiece
+
+# LLM orchestration
+langchain
+langgraph
+langchain-community
+langchain-huggingface
+
+# Evidence retrieval and vector search
+faiss-cpu
+
+# Validation and configuration
+pydantic
+python-dotenv
+
+# Web application and API
+streamlit
+fastapi
+uvicorn
+
+# Article and URL extraction
+requests
+beautifulsoup4
+trafilatura
+
+# Database and caching
+sqlalchemy
+
+# Testing
+pytest

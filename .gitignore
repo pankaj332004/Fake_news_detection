@@ -1,0 +1,184 @@
+# ==============================================================================
+# FAKE NEWS DETECTION — GITIGNORE CONFIGURATION
+# Protects against committing secrets, large datasets, binary weights, and OS/IDE clutter.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Python Environment & Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.uv/
+
+# ------------------------------------------------------------------------------
+# 2. Secrets, API Keys & Environment Variables (CRITICAL)
+# ------------------------------------------------------------------------------
+# Ignore all active environment files containing API keys and private tokens
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cert
+secrets.json
+credentials.json
+client_secret*.json
+
+# ------------------------------------------------------------------------------
+# 3. Datasets & Raw / Processed Benchmark Files (Avoid Repository Bloat)
+# ------------------------------------------------------------------------------
+# Raw downloaded archives and tabular data
+data/raw/*.tsv
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.tar.gz
+data/raw/*.jsonl
+
+# Processed datasets (CSV and Parquet tables)
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.feather
+data/processed/*.h5
+
+# Ingested evidence cache
+data/evidence/*
+!data/evidence/.gitkeep
+
+# Ensure structure and documentation remain tracked
+!data/raw/.gitkeep
+!data/raw/README
+!data/processed/.gitkeep
+!data/sample/
+!data/sample/**
+
+# ------------------------------------------------------------------------------
+# 4. Model Artifacts, Weights & Vector Embeddings
+# ------------------------------------------------------------------------------
+# Heavy model serialization formats
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.h5
+*.keras
+
+# Transformer checkpoints & Fine-tuned model checkpoints
+artifacts/models/transformer/*
+!artifacts/models/transformer/.gitkeep
+
+# Baseline binary pipelines (if tracked remotely or rebuilt locally)
+artifacts/models/baseline/*.joblib
+
+# FAISS and Vector Database Indexes
+artifacts/vector_store/*
+!artifacts/vector_store/.gitkeep
+*.faiss
+*.index
+
+# Local databases and caches
+*.sqlite
+*.sqlite3
+*.db
+src/storage/*.db
+.cache/
+cache/
+
+# Preserve configuration and benchmark metrics
+!artifacts/models/baseline/model_config.json
+!artifacts/models/baseline/metrics.json
+!artifacts/**/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 5. Testing, Code Quality & Coverage Reports
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+
+# ------------------------------------------------------------------------------
+# 6. Jupyter Notebook Checkpoints
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+*.nbconvert.ipynb
+
+# ------------------------------------------------------------------------------
+# 7. IDE, Editors & Operating System Metadata
+# ------------------------------------------------------------------------------
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ------------------------------------------------------------------------------
+# 8. Local Logs, Diagnostics & Agent Metadata
+# ------------------------------------------------------------------------------
+*.log
+logs/
+temp/
+tmp/
+.gemini/
+.system_generated/

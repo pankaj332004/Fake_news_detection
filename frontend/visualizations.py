@@ -70,13 +70,14 @@ def render_model_consensus_matrix(
     ev_color = "#ef4444" if evidence_status == "contradicted" else "#10b981" if evidence_status == "supported" else "#f59e0b"
     llm_color = "#ef4444" if llm_verdict.lower() in ("false", "fake") else "#10b981" if llm_verdict.lower() in ("true", "real") else "#94a3b8"
 
+    stat_conf_pct = f"{statistical_conf * 100:.1f}%"
     st.markdown(
         f"""
         <div class="consensus-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.2rem 0;">
             <div class="consensus-box" style="background: rgba(30, 41, 59, 0.6); padding: 1rem; border-radius: 10px; border-left: 4px solid {stat_color};">
                 <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8;">1. Statistical TF-IDF</div>
                 <div style="font-size: 1.3rem; font-weight: 700; color: {stat_color}; margin: 0.25rem 0;">{statistical_verdict}</div>
-                <div style="font-size: 0.8rem; color: #cbd5e1;">Confidence: <strong>{statistical_conf*100:.1f}%</strong></div>
+                <div style="font-size: 0.8rem; color: #cbd5e1;">Confidence: <strong>{stat_conf_pct}</strong></div>
                 <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.2rem;">Stylistic n-gram classifier</div>
             </div>
             <div class="consensus-box" style="background: rgba(30, 41, 59, 0.6); padding: 1rem; border-radius: 10px; border-left: 4px solid {ev_color};">

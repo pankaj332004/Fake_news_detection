@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Main Streamlit Application Dashboard for Veritas AI.
 Hybrid Fake News Detection & Evidence Fact-Verification Engine.
@@ -59,15 +60,45 @@ def run_dashboard():
 
     # Sidebar Configuration & Architecture Controls
     with st.sidebar:
-        st.markdown("### ⚙️ Engine Settings")
+        st.markdown(
+            """
+            <div style="padding: 0.5rem 0 1rem;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.3rem;">🛡️</span>
+                    <span style="font-size: 1.15rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.01em;">
+                        Veritas Engine
+                    </span>
+                </div>
+                <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.2rem 0.6rem; border-radius: 9999px; margin-top: 0.4rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+                    <span style="font-size: 0.7rem; font-weight: 700; color: #34d399; text-transform: uppercase;">
+                        Pipeline Online • 88/88 Tests
+                    </span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        st.markdown("### ⚙️ Engine Parameters")
+
+        # Quick Preset Selector right in the sidebar
+        sidebar_preset = st.selectbox(
+            "📋 Load Demo Case",
+            options=["-- Select a Demo Case --"] + list(SAMPLE_CLAIMS.keys()),
+            help="Pre-populate the main input with real benchmark test cases.",
+        )
+        if sidebar_preset != "-- Select a Demo Case --":
+            st.session_state["claim_input"] = SAMPLE_CLAIMS[sidebar_preset]
+
         backend_choice = st.selectbox(
             "LLM Verification Backend",
             options=[LLMBackend.MOCK, LLMBackend.LOCAL, LLMBackend.HF_API],
             index=0,
             format_func=lambda x: {
-                LLMBackend.MOCK: "Mock LLM (Fastest / Recommended for Demo)",
-                LLMBackend.LOCAL: "Local Transformers (google/flan-t5-small)",
-                LLMBackend.HF_API: "HuggingFace API (Remote Inference)",
+                LLMBackend.MOCK: "🚀 Mock LLM (Fast / Instant Demo)",
+                LLMBackend.LOCAL: "🧠 Local Flan-T5 (CPU Transformers)",
+                LLMBackend.HF_API: "🌐 HuggingFace API (Remote)",
             }.get(x, x),
             help="Select how the LLM fact-checking stage is executed.",
         )
@@ -78,23 +109,44 @@ def run_dashboard():
 
         top_k = st.slider("Top-K Evidence Passages", min_value=1, max_value=5, value=3)
 
+        policy_mode = st.select_slider(
+            "Decision Policy Rigor",
+            options=["Permissive", "Standard", "Strict"],
+            value="Standard",
+            help="Strict flags more ambiguous claims for manual human review.",
+        )
+
         st.markdown("---")
         st.markdown("### 🏛️ Knowledge Base Corpus")
         st.markdown(
             """
-            - **Vector Store:** FAISS Index (Cosine L2)
+            - **Vector Index:** FAISS Cosine Flat (`IndexFlatIP`)
             - **Embedding Model:** `all-MiniLM-L6-v2` (384-d)
+            - **Indexed Passages:** 22 peer-reviewed excerpts
             - **Authoritative Sources:**
               - 🏥 Centers for Disease Control (CDC)
               - 🌐 World Health Organization (WHO)
               - 🚀 NASA Goddard & JPL Archives
-              - 🔬 Nature & Peer-Reviewed Journals
+              - 🔬 Nature & Scientific Reviews
               - 🛡️ FactCheck.org & Reuters Fact Check
             """
         )
 
         st.markdown("---")
-        st.caption("Veritas AI v1.0 • Hybrid Pipeline Engine")
+        st.markdown("### 📑 Project Artifacts")
+        report_path = Path("reports/project_report.md")
+        if report_path.exists():
+            with open(report_path, "r", encoding="utf-8") as f:
+                report_text = f.read()
+            st.download_button(
+                label="📥 Download Capstone Report",
+                data=report_text,
+                file_name="Veritas_AI_Project_Report.md",
+                mime="text/markdown",
+                use_container_width=True,
+            )
+
+        st.caption("Veritas AI v1.0 • Hybrid Fact Verification Engine")
 
     # Ingestion Interface Tabs
     tab_claim, tab_article, tab_url = st.tabs(

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 UI Components and Design System for Veritas AI Fake News Detection Dashboard.
 Implements rich aesthetics, dark mode glassmorphism, responsive cards, and glowing badges.
@@ -16,6 +17,105 @@ def inject_custom_styles():
 
         html, body, [class*="css"] {
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Force dark background on the entire Streamlit app container */
+        .stApp {
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0b0f19 45%, #030712 100%) !important;
+            color: #f8fafc !important;
+        }
+
+        /* Sidebar styling */
+        section[data-testid="stSidebar"] {
+            background-color: #0b1120 !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Glowing sidebar expand button when collapsed */
+        [data-testid="collapsedControl"] {
+            color: #ffffff !important;
+            background: rgba(99, 102, 241, 0.25) !important;
+            border: 1px solid rgba(99, 102, 241, 0.5) !important;
+            border-radius: 8px !important;
+            margin: 0.5rem !important;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4) !important;
+        }
+
+        [data-testid="collapsedControl"]:hover {
+            background: rgba(99, 102, 241, 0.45) !important;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.7) !important;
+        }
+
+        /* Headers and text colors */
+        h1, h2, h3, h4, h5, h6 {
+            color: #f8fafc !important;
+        }
+        p, span, label, div {
+            color: #cbd5e1;
+        }
+
+        /* Action buttons */
+        div.stButton > button[kind="primary"] {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 12px !important;
+            font-weight: 700 !important;
+            font-size: 1rem !important;
+            padding: 0.75rem 2rem !important;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45) !important;
+            transition: all 0.2s ease !important;
+        }
+
+        div.stButton > button[kind="primary"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 28px rgba(99, 102, 241, 0.6) !important;
+        }
+
+        /* Preset sample buttons in horizontal row */
+        div[data-testid="stHorizontalBlock"] button {
+            background: rgba(30, 41, 59, 0.8) !important;
+            color: #cbd5e1 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            transition: all 0.2s ease !important;
+        }
+
+        div[data-testid="stHorizontalBlock"] button:hover {
+            border-color: #818cf8 !important;
+            color: #ffffff !important;
+            background: rgba(99, 102, 241, 0.25) !important;
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2) !important;
+        }
+
+        /* Input fields and text areas */
+        div[data-baseweb="input"], div[data-baseweb="textarea"], div[data-baseweb="base-input"] {
+            background-color: rgba(15, 23, 42, 0.9) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            border-radius: 12px !important;
+        }
+
+        div[data-baseweb="input"]:focus-within, div[data-baseweb="textarea"]:focus-within {
+            border-color: #6366f1 !important;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3) !important;
+        }
+
+        input, textarea {
+            color: #f8fafc !important;
+        }
+
+        /* Tab styling */
+        button[data-baseweb="tab"] {
+            color: #94a3b8 !important;
+            font-weight: 600 !important;
+            font-size: 0.95rem !important;
+        }
+
+        button[data-baseweb="tab"][aria-selected="true"] {
+            color: #a5b4fc !important;
+            border-bottom-color: #6366f1 !important;
         }
 
         /* Glassmorphic main cards */
@@ -38,7 +138,7 @@ def inject_custom_styles():
 
         /* Hero verdict styles */
         .verdict-hero {
-            padding: 2rem;
+            padding: 2.25rem;
             border-radius: 20px;
             margin: 1.5rem 0;
             text-align: center;
@@ -47,31 +147,31 @@ def inject_custom_styles():
         }
 
         .verdict-hero.verdict-false {
-            background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.25) 0%, rgba(15, 23, 42, 0.95) 75%);
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            box-shadow: 0 0 40px rgba(239, 68, 68, 0.2);
+            background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.3) 0%, rgba(15, 23, 42, 0.95) 75%);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            box-shadow: 0 0 50px rgba(239, 68, 68, 0.25);
         }
 
         .verdict-hero.verdict-true {
-            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.25) 0%, rgba(15, 23, 42, 0.95) 75%);
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            box-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
+            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.3) 0%, rgba(15, 23, 42, 0.95) 75%);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+            box-shadow: 0 0 50px rgba(16, 185, 129, 0.25);
         }
 
         .verdict-hero.verdict-unverifiable {
-            background: radial-gradient(circle at 50% 0%, rgba(100, 116, 139, 0.25) 0%, rgba(15, 23, 42, 0.95) 75%);
-            border: 1px solid rgba(100, 116, 139, 0.4);
-            box-shadow: 0 0 40px rgba(100, 116, 139, 0.15);
+            background: radial-gradient(circle at 50% 0%, rgba(100, 116, 139, 0.3) 0%, rgba(15, 23, 42, 0.95) 75%);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+            box-shadow: 0 0 50px rgba(100, 116, 139, 0.2);
         }
 
         .verdict-hero.verdict-needs_review {
-            background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.25) 0%, rgba(15, 23, 42, 0.95) 75%);
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            box-shadow: 0 0 40px rgba(245, 158, 11, 0.2);
+            background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.3) 0%, rgba(15, 23, 42, 0.95) 75%);
+            border: 1px solid rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 50px rgba(245, 158, 11, 0.25);
         }
 
         .verdict-title {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin: 0.5rem 0;
@@ -107,21 +207,22 @@ def inject_custom_styles():
         }
 
         .evidence-card {
-            background: rgba(15, 23, 42, 0.75);
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-bottom: 0.85rem;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 14px;
+            padding: 1.35rem;
+            margin-bottom: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.2s ease;
         }
 
         .evidence-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
+            border-color: rgba(99, 102, 241, 0.45);
             background: rgba(15, 23, 42, 0.95);
+            transform: translateY(-1px);
         }
 
         .source-link {
-            color: #60a5fa;
+            color: #818cf8;
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
@@ -130,19 +231,19 @@ def inject_custom_styles():
         }
 
         .source-link:hover {
-            color: #93c5fd;
+            color: #a5b4fc;
             text-decoration: underline;
         }
 
         /* Mono code citation block */
         .citation-tag {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(99, 102, 241, 0.15);
-            color: #a5b4fc;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(99, 102, 241, 0.2);
+            color: #c7d2fe;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            border: 1px solid rgba(99, 102, 241, 0.4);
         }
         </style>
         """,
@@ -154,19 +255,19 @@ def render_header():
     """Renders the dashboard top hero banner."""
     st.markdown(
         """
-        <div style="text-align: center; padding: 2rem 1rem 1.5rem; margin-bottom: 1.5rem;">
-            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.3rem 0.9rem; border-radius: 9999px; margin-bottom: 0.8rem;">
-                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #6366f1; box-shadow: 0 0 8px #6366f1;"></span>
-                <span style="font-size: 0.75rem; font-weight: 700; color: #a5b4fc; letter-spacing: 0.08em; text-transform: uppercase;">
+        <div style="text-align: center; padding: 1.5rem 1rem 1.25rem; margin-bottom: 1.25rem;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.35); padding: 0.35rem 1rem; border-radius: 9999px; margin-bottom: 0.9rem;">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #818cf8; box-shadow: 0 0 10px #818cf8;"></span>
+                <span style="font-size: 0.8rem; font-weight: 700; color: #c7d2fe; letter-spacing: 0.08em; text-transform: uppercase;">
                     Veritas AI • Evidence-Grounded Verification Engine
                 </span>
             </div>
-            <h1 style="font-size: 2.75rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.25rem 0 0.75rem;">
+            <h1 style="font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 15%, #a5b4fc 60%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.25rem 0 0.75rem; letter-spacing: -0.02em;">
                 Hybrid Fake News & Fact Verification
             </h1>
-            <p style="color: #94a3b8; font-size: 1.05rem; max-width: 760px; margin: 0 auto; line-height: 1.6;">
-                Synthesizing <strong>Statistical TF-IDF Modeling</strong>, <strong>FAISS Semantic Evidence Retrieval</strong>, 
-                and <strong>Open-Weight LLM Fact Verification</strong> with robust uncertainty bounds and human-in-the-loop review.
+            <p style="color: #cbd5e1; font-size: 1.1rem; max-width: 780px; margin: 0 auto; line-height: 1.6;">
+                Synthesizing <strong style="color: #ffffff;">Statistical TF-IDF Modeling</strong>, <strong style="color: #ffffff;">FAISS Semantic Evidence Retrieval</strong>, 
+                and <strong style="color: #ffffff;">Open-Weight LLM Fact Verification</strong> with robust uncertainty bounds and human-in-the-loop review.
             </p>
         </div>
         """,
@@ -196,14 +297,14 @@ def render_verdict_hero(
     color = verdict_colors.get(v_clean, "#6366f1")
 
     icons = {
-        "FALSE": "❌",
-        "FAKE": "❌",
-        "TRUE": "✅",
-        "REAL": "✅",
-        "UNVERIFIABLE": "❓",
-        "NEEDS_REVIEW": "⚠️",
+        "FALSE": "&#10060;",
+        "FAKE": "&#10060;",
+        "TRUE": "&#9989;",
+        "REAL": "&#9989;",
+        "UNVERIFIABLE": "&#10067;",
+        "NEEDS_REVIEW": "&#9888;&#65039;",
     }
-    icon = icons.get(v_clean, "🔍")
+    icon = icons.get(v_clean, "&#128269;")
 
     descriptions = {
         "FALSE": "Contradicted by authoritative evidence and refuted by factual analysis.",
@@ -214,6 +315,7 @@ def render_verdict_hero(
         "NEEDS_REVIEW": "Conflicting signals or elevated uncertainty detected. Manual human review recommended.",
     }
     desc = descriptions.get(v_clean, "Analysis completed.")
+    conf_display = f"{calibrated_confidence * 100:.1f}%"
 
     st.markdown(
         f"""
@@ -228,7 +330,7 @@ def render_verdict_hero(
                 {desc}
             </div>
             <div style="display: inline-flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; background: rgba(15, 23, 42, 0.6); padding: 0.75rem 1.5rem; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.08);">
-                <div style="font-size: 0.85rem; color: #cbd5e1;">Confidence: <strong style="color: #ffffff;">{calibrated_confidence*100:.1f}%</strong></div>
+                <div style="font-size: 0.85rem; color: #cbd5e1;">Confidence: <strong style="color: #ffffff;">{conf_display}</strong></div>
                 <div style="font-size: 0.85rem; color: #cbd5e1;">Uncertainty: <strong style="color: #ffffff; text-transform: uppercase;">{uncertainty_level}</strong></div>
                 <div style="font-size: 0.85rem; color: #cbd5e1;">Review Flag: <strong style="color: {'#f59e0b' if should_flag_review else '#10b981'};">{'Triggered' if should_flag_review else 'Clear'}</strong></div>
             </div>
@@ -282,6 +384,7 @@ def render_evidence_cards(evidence_passages: List[Dict[str, Any]]):
 
         stance_pill_class = f"pill-{stance}" if stance in ("supports", "contradicts") else "pill-neutral"
         stance_label = stance.upper()
+        score_display = f"{score * 100:.1f}%"
 
         st.markdown(
             f"""
@@ -295,7 +398,7 @@ def render_evidence_cards(evidence_passages: List[Dict[str, Any]]):
                         </span>
                     </div>
                     <div style="font-size: 0.85rem; font-weight: 700; color: #38bdf8;">
-                        Similarity: {score*100:.1f}%
+                        Similarity: {score_display}
                     </div>
                 </div>
                 <div style="font-size: 0.95rem; line-height: 1.6; color: #e2e8f0; font-style: italic; margin-bottom: 0.8rem; border-left: 3px solid rgba(99, 102, 241, 0.4); padding-left: 0.75rem;">
@@ -307,7 +410,7 @@ def render_evidence_cards(evidence_passages: List[Dict[str, Any]]):
                     </div>
                     <div>
                         <a href="{source_url}" target="_blank" class="source-link">
-                            🔗 View Official Source ↗
+                            &#128279; View Official Source &rarr;
                         </a>
                     </div>
                 </div>
@@ -327,7 +430,7 @@ def render_reasoning_and_limitations(verification: Dict[str, Any]):
     limitations = verification.get("limitations", "None stated.")
     model_name = verification.get("model_name", "flan-t5-small")
 
-    with st.expander("🧠 LLM Fact-Verification Reasoning & Citations", expanded=True):
+    with st.expander("Fact-Verification Reasoning & Citations", expanded=True):
         st.markdown(f"**Verification Model:** `{model_name}`")
         st.markdown(f"**Step-by-Step Fact-Checking Reasoning:**\n\n{reasoning}")
 
